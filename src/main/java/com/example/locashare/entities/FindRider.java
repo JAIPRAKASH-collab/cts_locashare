@@ -1,4 +1,5 @@
 package com.example.locashare.entities;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,21 +13,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 @Entity
-@Table(name="owner")
-public class Owner {
+@Table (name = "find_rider")
+public class FindRider {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "owner_id")
-    public int ownerId;
-	
-	@Column(name = "owner_name", nullable = false)
-	public String ownerName;
-	
-	@Column(name = "license_no", nullable = false)
-	public String licenseNo;
+	@Column (name= "rider_id", nullable = false)
+	public int RiderId;
 	
 	@Column (name = "vehicle_type", nullable = false)
 	public int vehicleType;
@@ -45,4 +38,18 @@ public class Owner {
 	
 	@Column (name = "company", nullable = false)
 	public String company;
+	
+	/*
+	 * @Column (name = "start") public String pickup;
+	 * 
+	 * @Column (name = "destination") public String drop;
+	 * 
+	 * @Column ( name = "arrival_time") public int pickupTime ;
+	 * 
+	 * @Column (name = "departure_time") public int DropTime;
+	 * 
+	 * @Column (name = "rider_company", nullable = false) public String company;
+	 */
+	
+	
 }

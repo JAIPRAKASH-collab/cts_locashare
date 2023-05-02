@@ -1,4 +1,4 @@
-package com.example.locashare.Controller;
+package com.example.locashare.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +19,15 @@ public class OwnerController {
 	@Autowired
 	private OwnerDao ownerDao;
 	
-	@GetMapping
-	public List<Owner> getOwner(){
-		return this.ownerDao.getOwner();
+	@GetMapping("/findall")
+	public List<Owner> getOwners(){
+		return this.ownerDao.getOwners();
 	}
+	
 	
 	/*
 	 * @GetMapping public List<Owner> getOwnerById(){ return
 	 * this.ownerDao.getOwnerById(); }
+	 * 
 	 */
-
 }
